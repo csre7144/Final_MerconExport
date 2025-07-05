@@ -1,0 +1,482 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Jute Collection</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/logo_icon.png' %}" rel="icon">
+  <!-- <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+</head>
+
+<body class="portfolio-details-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="{% url 'home' %}" class="logo d-flex align-items-center me-auto">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">Mercon</h1>
+        <span>Export</span>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Home<br></a></li>
+          <li><a href="#about">About</a></li>
+          <li class="dropdown"><a href="#"><span>Product Collection</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="{% url 'carpet_pg' %}">Carpet</a></li>
+              <li><a href="{% url 'furniture_pg' %}">Furniture Collection</a></li>
+              <li><a href="{% url 'jute_pg' %}">Textile</a></li>
+              <li><a href="{% url 'leather_pg' %}">Jute</a></li>
+              <li><a href="{% url 'marble_pg' %}">Leather And Tomato Leather</a></li>
+              <li><a href="{% url 'textile_pg' %}">Marble</a></li>
+            </ul>
+          </li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="index.html#contact">Get Started</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    
+
+    <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details section">
+
+      <div class="container mt-5" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-5">
+            <div class="portfolio-details-slider swiper init-swiper">
+
+              <script type="application/json" class="swiper-config">
+                {
+                  "loop": true,
+                  "speed": 600,
+                  "autoplay": {
+                    "delay": 5000
+                  },
+                  "slidesPerView": "auto",
+                  "pagination": {
+                    "el": ".swiper-pagination",
+                    "type": "bullets",
+                    "clickable": true
+                  }
+                }
+              </script>
+
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                  <img src="{% static 'assets/img/carpet/multiple-carpets-grand-bazaar-istanbul-turkey.jpg' %}" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="{% static 'assets/img/carpet/pillow-sofa.jpg' %}" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="{% static 'assets/img/carpet/softness-elegance-old-fashioned-textiles-pile-high-generated-by-ai.jpg' %}" alt="">
+                </div>
+
+                <!-- <div class="swiper-slide">
+                  <img src="assets/img/portfolio/books-1.jpg" alt="">
+                </div> -->
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+              <h3 style="font-size: 32px;">Jute Collection</h3>
+              <p style="font-size: 22px;">MerconExport offers premium, biodegradable jute products for packaging, agriculture, home décor, and sustainable fashion. Known as the “Golden Fiber,” jute is a durable, eco-conscious material sourced from leading Indian jute hubs.</p>
+              <!-- <ul>
+                <li><strong>Category</strong>: Web design</li>
+                <li><strong>Client</strong>: ASU Company</li>
+                <li><strong>Project date</strong>: 01 March, 2020</li>
+                <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
+              </ul> -->
+            </div>
+            <!-- <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+              <h2>Exercitationem repudiandae officiis neque suscipit</h2>
+              <p>
+                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
+              </p>
+            </div> -->
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Details Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section section-bg dark-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Product Collection</h2>
+        <!-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> -->
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item d-flex position-relative h-100">
+              <i class="bi bi-briefcase icon flex-shrink-0"></i>
+              <div>
+                <h4 class="title">Raw Jute</h4>
+                <li class="description">Material: Jute fiber</li>
+                <li class="description">Use: Spinning, weaving, industrial use</li>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item d-flex position-relative h-100">
+              <i class="bi bi-card-checklist icon flex-shrink-0"></i>
+              <div>
+                <h4 class="title">Jute Yarn & Twine</h4>
+                <li class="description">Material: Twisted jute fiber</li>
+                <li class="description">Use: Binding, crafts, sacks, rugs</li>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item d-flex position-relative h-100">
+              <i class="bi bi-bar-chart icon flex-shrink-0"></i>
+              <div>
+                <h4 class="title"><a href="service-details.html" class="stretched-link">Hessian Fabric</a></h4>
+                <li class="description">Material: Woven jute</li>
+                <li class="description">Use: Bags, agro covers, upholstery backing</li>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item d-flex position-relative h-100">
+              <i class="bi bi-bar-chart icon flex-shrink-0"></i>
+              <div>
+                <h4 class="title"><a href="service-details.html" class="stretched-link">Sacking Fabric</a></h4>
+                <li class="description">Material: Coarse jute fabric</li>
+                <li class="description">Use: Food grain sacks, packaging</li>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item d-flex position-relative h-100">
+              <i class="bi bi-binoculars icon flex-shrink-0"></i>
+              <div>
+                <h4 class="title"><a href="service-details.html" class="stretched-link">Jute Bags</a></h4>
+                <li class="description">Material: Woven/dyed jute</li>
+                <li class="description">Use: Grocery bags, promotional carry bags</li>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item d-flex position-relative h-100">
+              <i class="bi bi-binoculars icon flex-shrink-0"></i>
+              <div>
+                <h4 class="title"><a href="service-details.html" class="stretched-link">Jute Rugs & Mats</a></h4>
+                <li class="description">Material: Braided or woven jute</li>
+                <li class="description">Use: Flooring, home décor</li>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item d-flex position-relative h-100">
+              <i class="bi bi-binoculars icon flex-shrink-0"></i>
+              <div>
+                <h4 class="title"><a href="service-details.html" class="stretched-link">Geo-Jute</a></h4>
+                <li class="description">Material: Open-weave jute mesh</li>
+                <li class="description">Use: Soil erosion control in agriculture & construction</li>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+        </div>
+
+      </div>
+      
+    </section><!-- /Services Section -->
+
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats section pb-5">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+            <i class="bi bi-graph-up"></i>
+            <!-- <div class="stats-item">
+              <h4 class="text-center">Export Markets (Carpets)</h4>
+              <li>Africa: Nigeria, Egypt, South Africa</li>
+              <li>Middle East: UAE, Saudi Arabia, Oman</li>
+              <li>SE Asia: Malaysia, Philippines, Thailand</li>
+            </div> -->
+            <div class="stats-item">
+              <h4 class="text-center">Export Markets</h4>
+              <ul class="justified-list">
+                <li><span>Africa:-</span> Egypt, Ghana, Nigeria</li>
+                <li><span>Middle East:-</span> UAE, Oman, Saudi Arabia</li>
+                <li><span>SE Asia:-</span> Indonesia, Malaysia, Philippines</li>
+              </ul>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+            <!-- <i class="bi bi-journal-richtext"></i> -->
+            <i class="bi bi-briefcase"></i>
+
+            <div class="stats-item">
+              <h4 class="text-center">Customization & OEM</h4>
+              <ul class="justified-list">
+                <li>Custom GSM, weave, and finishes</li>
+                <li>OEM logo printing on bags</li>
+                <li>Private label packing options</li>
+              </ul>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+            <i class="bi bi-box"></i>
+
+            <div class="stats-item">
+              <h4 class="text-center">Packaging Details</h4>
+              <ul class="justified-list">
+                <li><span>Unit:-</span>Bundled rolls, folded fabric, or finished bags</li>
+                <li><span>Outer:-</span>HDPE-wrapped bales or export cartons</li>
+                <li><span>Labeling:-</span>Size, type, GSM, origin, OEM logos</li>
+              </ul>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+            <!-- <i class="bi bi-people"></i> -->
+             <i class="bi bi-calendar"></i>
+
+            <div class="stats-item">
+              <h4 class="text-center">Lead Time & MOQ</h4>
+              <ul class="justified-list">
+                <li>MOQ: 500–1000 meters or units</li>
+                <li>Production time: 10–25 days</li>
+              </ul>
+            </div>
+          </div><!-- End Stats Item -->
+
+
+        </div>
+
+      </div>
+
+    </section><!-- /Stats Section -->
+
+
+    <section id="faq" class="faq section pb-4">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Buyer FAQ (Jute)???</h2>
+        <!-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> -->
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row justify-content-center">
+
+          <div class="col-lg-10" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="faq-container">
+
+              <div class="faq-item">
+                <h3>Q: Do you provide printed jute bags?</h3>
+                <div class="faq-content">
+                  <p>A: Yes, we offer screen or digital printed bags with your design.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+              
+              <div class="faq-item">
+                <h3>Q: Can we customize the weave or GSM?</h3>
+                <div class="faq-content">
+                  <p>A: Absolutely, GSM, width, and design can all be customized.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>Q: Is your jute certified organic?</h3>
+                <div class="faq-content">
+                  <p>A: Yes, GOTS-certified jute options are available on request.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+            </div>
+
+          </div><!-- End Faq Column-->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Faq Section -->
+
+
+  <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details section">
+
+      <div class="container mt-5" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="mt-3 pb-5">
+            <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+              <h3 style="font-size: 32px;">💬 WhatsApp Sample Message (Textiles)</h3>
+              <p style="font-size: 18px;">Hi [Buyer Name],
+                <br>
+                We supply eco-friendly jute products from India –
+                <br>
+                🌿 Jute bags, hessian cloth, geo-mats
+                <br>
+                🧵 Custom sizes, logos, and GSM
+                <br>
+                📦 Fast shipping & private labeling
+                <br>
+                Shall I share our catalog and samples?
+                <br>
+                Thanks,
+                <br>
+                [Your Name]
+              </p>
+          </div>
+
+      </div>
+
+    </section><!-- /Portfolio Details Section -->
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-6 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">MerconExport</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>[Your Address / City]</p>
+            <p>[Your Address / City]</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>Phone/WhatsApp: +91-XXXXXXXXXX</span></p>
+            <p><strong>Email:</strong> <span>info@merconexport.com</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <!-- <li><a href="#">Services</a></li> -->
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-3 footer-links">
+          <h4>Our Products</h4>
+          <ul>
+            <li><a href="{% url 'carpet_pg' %}">Carpet Collection</a></li>
+            <li><a href="{% url 'furniture_pg' %}">Furniture Collection</a></li>
+            <li><a href="{% url 'textile_pg' %}">Textile Collection</a></li>
+            <li><a href="{% url 'jute_pg' %}">Jute Collection</a></li>
+            <li><a href="{% url 'leather_pg' %}">Leather and Tomato Collection</a></li>
+            <li><a href="{% url 'marble_pg' %}">Marble Collection</a></li>
+          </ul>
+        </div>
+
+        <!-- <div class="col-lg-4 col-md-12 footer-newsletter">
+          <h4>Our Newsletter</h4>
+          <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+          <form action="forms/newsletter.php" method="post" class="php-email-form">
+            <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Your subscription request has been sent. Thank you!</div>
+          </form>
+        </div> -->
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>2025 © <span>Copyright</span> <strong class=" sitename">MerconExport</strong> <span>All Rights Reserved</span></p>
+      
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src ="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'assets/vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+
+  <!-- Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>

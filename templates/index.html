@@ -1,0 +1,1359 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>MerconExport HomePage</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/logo_icon.png' %}" rel="icon">
+  <!-- <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a class="logo d-flex align-items-center me-auto">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">Mercon</h1>
+        <span>Export</span>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Home<br></a></li>
+          <li><a href="#about">About</a></li>
+          <li class="dropdown"><a href="#"><span>Product Collection</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="{% url 'carpet_pg' %}">Carpet</a></li>
+              <li><a href="{% url 'furniture_pg' %}">Furniture Collection</a></li>
+              <li><a href="{% url 'jute_pg' %}">Textile</a></li>
+              <li><a href="{% url 'leather_pg' %}">Jute</a></li>
+              <li><a href="{% url 'marble_pg' %}">Leather And Tomato Leather</a></li>
+              <li><a href="{% url 'textile_pg' %}">Marble</a></li>
+            </ul>
+          </li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="#contact">Contact</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+
+      <img src="{% static 'assets/img/w1.jpg' %}" alt="" data-aos="fade-in">
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h2 data-aos="fade-up text-center" data-aos-delay="100">Textiles, Hotel Supplies, Eco Products, Handicrafts, Chemicals, Herbal Products</h2>
+            <!-- <p data-aos="fade-up" data-aos-delay="200">We are team of talented designers making websites with Bootstrap</p>
+            <div class="d-flex mt-4" data-aos="fade-up" data-aos-delay="300">
+              <a href="#about" class="btn-get-started">Get Started</a>
+            </div> -->
+
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- Clients Section -->
+    <section id="clients" class="clients section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 2,
+                  "spaceBetween": 40
+                },
+                "480": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 60
+                },
+                "640": {
+                  "slidesPerView": 4,
+                  "spaceBetween": 80
+                },
+                "992": {
+                  "slidesPerView": 6,
+                  "spaceBetween": 120
+                }
+              }
+            }
+          </script>
+          <div class="swiper-wrapper align-items-center m-5">
+            <div class="swiper-slide"><img src="{% static 'assets/img/clients/client-1.png' %}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{% static 'assets/img/clients/client-2.png' %}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{% static 'assets/img/clients/client-3.png' %}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{% static 'assets/img/clients/client-4.png' %}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{% static 'assets/img/clients/client-5.png' %}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{% static 'assets/img/clients/client-6.png' %}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{% static 'assets/img/clients/client-7.png' %}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{% static 'assets/img/clients/client-8.png' %}" class="img-fluid" alt=""></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section><!-- /Clients Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section section-bg dark-background">
+
+      <div class="container position-relative">
+
+        <div class="row gy-5">
+
+          <!-- <div class="content col-xl-4 d-flex flex-column" data-aos="fade-up" data-aos-delay="100">
+            <h3>MerconExport Product</h3>
+            <p>
+              A multi-category export portfolio targeting B2B and B2C buyers across various sectors:
+            </p>
+            <a href="#" class="about-btn align-self-center align-self-xl-start"><span>About us</span> <i class="bi bi-chevron-right"></i></a>
+          </div> -->
+
+          <div class="col-xl-12" data-aos="fade-up" data-aos-delay="200">
+            <h2 class="text-center pb-5">MerconExport Product</h2>
+
+            <div class="row gy-4">
+
+              <div class="col-md-6 icon-box position-relative">
+                <!-- <i class="bi bi-briefcase"></i> -->
+                <h4><a href="" class="stretched-link">Textiles & Apparel</a></h4>
+                <p>Fabrics (knitted, woven), yarns, readymade garments, hotel textiles</p>
+              </div><!-- Icon-Box -->
+
+              <div class="col-md-6 icon-box position-relative">
+                <!-- <i class="bi bi-gem"></i> -->
+                <h4><a href="" class="stretched-link">Hotel Supplies</a></h4>
+                <p>Towels, bedsheets, mattresses, carpets, paper products, cleaning chemicals</p>
+              </div><!-- Icon-Box -->
+
+              <div class="col-md-6 icon-box position-relative">
+                <!-- <i class="bi bi-broadcast"></i> -->
+                <h4><a href="" class="stretched-link">Eco-Friendly Products</a></h4>
+                <p>Jute bags, coconut coir items, areca plates, vegan leather</p>
+              </div><!-- Icon-Box -->
+
+              <div class="col-md-6 icon-box position-relative">
+                <!-- <i class="bi bi-easel"></i> -->
+                <h4><a href="" class="stretched-link">Handicrafts</a></h4>
+                <p>Wooden, jute, marble decor items; handmade carpets</p>
+              </div><!-- Icon-Box -->
+
+              <div class="col-md-6 icon-box position-relative">
+                <!-- <i class="bi bi-easel"></i> -->
+                 <!-- <i class="bi bi-beaker"></i> -->
+                <h4><a href="" class="stretched-link">Industrial Chemicals</a></h4>
+                <p>Phenolic resin, celluloid, activated carbon, silica gel, guar gum</p>
+              </div><!-- Icon-Box -->
+
+              <div class="col-md-6 icon-box position-relative">
+                <!-- <i class="bi bi-easel"></i> -->
+                 <!-- <i class="bi bi-flower1"></i>  -->
+                <h4><a href="" class="stretched-link">Herbal Products (OEM)</a></h4>
+                <p>Moringa, brahmi, ashwagandha, isabgol, neem, private label Ayurveda products</p>
+              </div><!-- Icon-Box -->
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+    
+
+    <!-- Tabs Section -->
+  <section id="tabs" class="tabs section">
+    <div class="container">
+
+      <ul class="nav nav-tabs row d-flex" data-aos="fade-up" data-aos-delay="100">
+        <li class="nav-item col-4">
+          <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tabs-tab-1">
+            <i class="bi bi-binoculars"></i>
+            <h4 class="d-none d-lg-block">Carpet</h4>
+          </a>
+        </li>
+        <li class="nav-item col-4">
+          <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tabs-tab-2">
+            <i class="bi bi-box-seam"></i>
+            <h4 class="d-none d-lg-block">Furniture Collection</h4>
+          </a>
+        </li>
+        <li class="nav-item col-4">
+          <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tabs-tab-3">
+            <i class="bi bi-brightness-high"></i>
+            <h4 class="d-none d-lg-block">Textile</h4>
+          </a>
+        </li>
+        <!-- If you want a 4th tab, add it here -->
+        <!--
+        <li class="nav-item col-3">
+          <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tabs-tab-4">
+            <i class="bi bi-star"></i>
+            <h4 class="d-none d-lg-block">Jute</h4>
+          </a>
+        </li>
+        -->
+      </ul>
+
+      <div class="tab-content" data-aos="fade-up" data-aos-delay="200">
+
+        <!-- Carpet Tab -->
+        <div class="tab-pane fade active show" id="tabs-tab-1">
+          <div class="row">
+            <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+              <h3>Elegant & Durable Carpet Designs</h3>
+              <p class="fst-italic">
+                Explore high-quality carpets made from wool and silk, suitable for any space.
+              </p>
+              <ul>
+                <li><i class="bi bi-check2-all"></i> <span>Hand-knotted and hand-tufted varieties available.</span></li>
+                <li><i class="bi bi-check2-all"></i> <span>Ideal for residential, commercial, and hospitality use.</span></li>
+                <li><i class="bi bi-check2-all"></i> <span>Available in traditional and modern patterns.</span></li>
+              </ul>
+              <p>
+                Our carpets combine craftsmanship with comfort, delivering value and elegance to your space.
+              </p>
+               <a href="carpet.html" style="padding: 10px;display: inline-block; background-color: #e03a3c; border: none; color: white;">Read more</a>
+            </div>
+            <div class="col-lg-6 order-1 order-lg-2 text-center">
+              <img src="{% static 'assets/img/carpet.jpg' %}" alt="Carpet Collection" class="img-fluid">
+            </div>
+          </div>
+        </div>
+
+        <!-- Furniture Tab -->
+        <div class="tab-pane fade" id="tabs-tab-2">
+          <div class="row">
+            <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+              <h3>Stylish Furniture Collections</h3>
+              <p>
+                Discover furniture pieces that blend function and aesthetics seamlessly.
+              </p>
+              <p class="fst-italic">
+                Perfect for home, office, or hospitality settings.
+              </p>
+              <ul>
+                <li><i class="bi bi-check2-all"></i> <span>Premium wood and metal frame designs.</span></li>
+                <li><i class="bi bi-check2-all"></i> <span>Modern, classic, and contemporary styles.</span></li>
+                <li><i class="bi bi-check2-all"></i> <span>Durable finishes with ergonomic comfort.</span></li>
+                <li><i class="bi bi-check2-all"></i> <span>Custom furniture options available on request.</span></li>
+              </ul>
+              <a href="furniture.html" style="padding: 10px;display: inline-block; background-color: #e03a3c; border: none; color: white;">Read more</a>
+
+            </div>
+            <div class="col-lg-6 order-1 order-lg-2 text-center">
+              <img src="{% static 'assets/img/furniture.jpg' %}" alt="Furniture Collection" class="img-fluid">
+            </div>
+          </div>
+        </div>
+
+        <!-- Textile Tab -->
+        <div class="tab-pane fade" id="tabs-tab-3">
+          <div class="row">
+            <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+              <h3>Fine Quality Textile Products</h3>
+              <p>
+                Sourced from the best mills, our textiles offer beauty and longevity.
+              </p>
+              <ul>
+                <li><i class="bi bi-check2-all"></i> <span>Cotton, linen, silk, and synthetic options.</span></li>
+                <li><i class="bi bi-check2-all"></i> <span>Ideal for upholstery, curtains, and decor.</span></li>
+                <li><i class="bi bi-check2-all"></i> <span>Eco-friendly and hypoallergenic materials available.</span></li>
+               <a href="textile.html" style="padding: 10px;display: inline-block; background-color: #e03a3c; border: none; color: white;">Read more</a>
+
+              </ul>
+            </div>
+            <div class="col-lg-6 order-1 order-lg-2 text-center">
+              <img src="{% static 'assets/img/textiles-sale.jpg' %}" alt="Textile Products" class="img-fluid">
+            </div>
+          </div>
+        </div>
+
+        <!-- If using 4th tab, uncomment below -->
+        <!--
+        <div class="tab-pane fade" id="tabs-tab-4">
+          <div class="row">
+            <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+              <h3>Jute Products</h3>
+              <p>
+                Durable and eco-friendly jute goods for modern interiors.
+              </p>
+              <ul>
+                <li><i class="bi bi-check2-all"></i> <span>Natural, biodegradable material.</span></li>
+                <li><i class="bi bi-check2-all"></i> <span>Ideal for rugs, bags, and home decor.</span></li>
+                <li><i class="bi bi-check2-all"></i> <span>Customizable in size and color.</span></li>
+              </ul>
+            </div>
+            <div class="col-lg-6 order-1 order-lg-2 text-center">
+              <img src="assets/img/jute.jpg" alt="Jute Collection" class="img-fluid">
+            </div>
+          </div>
+        </div>
+        -->
+
+      </div>
+    </div>
+  </section>
+
+
+    <!--  Another Tabs Section -->
+    <section id="tabs" class="tabs section mt-5">
+
+      <div class="container">
+
+        <ul class="nav nav-tabs row  d-flex" data-aos="fade-up" data-aos-delay="100">
+          <li class="nav-item col-4">
+            <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tabs-tab-4">
+              <i class="bi bi-binoculars"></i>
+              <h4 class="d-none d-lg-block">Jute</h4>
+            </a>
+          </li>
+          <li class="nav-item col-4">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tabs-tab-5">
+              <i class="bi bi-box-seam"></i>
+              <h4 class="d-none d-lg-block">Leather And Tomato Leather</h4>
+            </a>
+          </li>
+          <li class="nav-item col-4">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tabs-tab-6">
+              <i class="bi bi-brightness-high"></i>
+              <h4 class="d-none d-lg-block">Marble</h4>
+            </a>
+          </li>
+          
+          
+        </ul><!-- End Tab Nav -->
+
+        <div class="tab-content" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="tab-pane fade active show" id="tabs-tab-4">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
+                <p class="fst-italic">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                  magna aliqua.
+                </p>
+                <ul>
+                  <li><i class="bi bi-check2-all"></i>
+                    <spab>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</spab>
+                  </li>
+                  <li><i class="bi bi-check2-all"></i> <span>Duis aute irure dolor in reprehenderit in voluptate velit</span>.</li>
+                  <li><i class="bi bi-check2-all"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</span></li>
+                </ul>
+                <p>
+                  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                  velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                  culpa qui officia deserunt mollit anim id est laborum
+                </p>
+               <a href="jute.html" style="padding: 10px;display: inline-block; background-color: #e03a3c; border: none; color: white;">Read more</a>
+
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="{% static 'assets/img/jute.jpg' %}" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div><!-- End Tab Content Item -->
+
+          <div class="tab-pane fade" id="tabs-tab-5">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                <h3>Neque exercitationem debitis soluta quos debitis quo mollitia officia est</h3>
+                <p>
+                  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                  velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                  culpa qui officia deserunt mollit anim id est laborum
+                </p>
+                <p class="fst-italic">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                  magna aliqua.
+                </p>
+                <ul>
+                  <li><i class="bi bi-check2-all"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Provident mollitia neque rerum asperiores dolores quos qui a. Ipsum neque dolor voluptate nisi sed.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</span></li>
+                </ul>
+                <a href="leather.html" style="padding: 10px;display: inline-block; background-color: #e03a3c; border: none; color: white;">Read more</a>
+
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="{% static 'assets/img/leather.jpg' %}" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div><!-- End Tab Content Item -->
+
+          <div class="tab-pane fade" id="tabs-tab-6">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                <h3>Voluptatibus commodi ut accusamus ea repudiandae ut autem dolor ut assumenda</h3>
+                <p>
+                  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                  velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                  culpa qui officia deserunt mollit anim id est laborum
+                </p>
+                <ul>
+                  <li><i class="bi bi-check2-all"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Provident mollitia neque rerum asperiores dolores quos qui a. Ipsum neque dolor voluptate nisi sed.</span></li>
+                </ul>
+                <p class="fst-italic">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                  magna aliqua.
+                </p>
+               <a href="marble.html" style="padding: 10px; display: inline-block; background-color: #e03a3c; border: none; color: white;">Read more</a>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="{% static 'assets/img/marble.jpg' %}" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div><!-- End Tab Content Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Tabs Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section section-bg dark-background">
+
+      <div class="container position-relative">
+
+        <div class="row gy-5">
+
+          <!-- <div class="content col-xl-4 d-flex flex-column" data-aos="fade-up" data-aos-delay="100">
+            <h3>MerconExport Product</h3>
+            <p>
+              A multi-category export portfolio targeting B2B and B2C buyers across various sectors:
+            </p>
+            <a href="#" class="about-btn align-self-center align-self-xl-start"><span>About us</span> <i class="bi bi-chevron-right"></i></a>
+          </div> -->
+
+          <div class="col-xl-12" data-aos="fade-up" data-aos-delay="200">
+            <h2 class="text-center pb-5"><span style="color: #e03a3c;">MerconExport</span> Application</h2>
+
+            <div class="row gy-4">
+
+              <div class="col-md-6 icon-box position-relative">
+                <!-- <i class="bi bi-briefcase"></i> -->
+                <h4><a href="" class="stretched-link">Textiles/Apparel</a></h4>
+                <p>Fashion wear, uniforms, hotel rooms</p>
+              </div><!-- Icon-Box -->
+
+              <div class="col-md-6 icon-box position-relative">
+                <!-- <i class="bi bi-gem"></i> -->
+                <h4><a href="" class="stretched-link">Hotel Supplies</a></h4>
+                <p>Hospitality furnishing, hygiene, housekeeping</p>
+              </div><!-- Icon-Box -->
+
+              <div class="col-md-6 icon-box position-relative">
+                <!-- <i class="bi bi-broadcast"></i> -->
+                <h4><a href="" class="stretched-link">Eco Products</a></h4>
+                <p>Packaging, dining, gifting, retail</p>
+              </div><!-- Icon-Box -->
+
+              <div class="col-md-6 icon-box position-relative">
+                <!-- <i class="bi bi-easel"></i> -->
+                <h4><a href="" class="stretched-link">Handicrafts</a></h4>
+                <p>Home décor, gifting, art & culture</p>
+              </div><!-- Icon-Box -->
+
+              <div class="col-md-6 icon-box position-relative">
+                <!-- <i class="bi bi-easel"></i> -->
+                 <!-- <i class="bi bi-beaker"></i> -->
+                <h4><a href="" class="stretched-link">Industrial Chemicals</a></h4>
+                <p>Adhesives, coatings, purification, pharma, textiles</p>
+              </div><!-- Icon-Box -->
+
+              <div class="col-md-6 icon-box position-relative">
+                <!-- <i class="bi bi-easel"></i> -->
+                 <!-- <i class="bi bi-flower1"></i>  -->
+                <h4><a href="" class="stretched-link">Herbal Products</a></h4>
+                <p>Health supplements, cosmetics, wellness drinks</p>
+              </div><!-- Icon-Box -->
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+
+    <!-- Services Section -->
+    <section id="services" class="services section section-bg">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Key Technical Specifications</h2>
+        <!-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> -->
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item d-flex position-relative h-100" style="background-color: rgba(0, 0, 0, 0.1);">
+              <!-- <i class="bi bi-briefcase icon flex-shrink-0"></i> -->
+              <div>
+                <h4 class="title">Fabrics/Yarn</h4>
+                <li class="description">GSM, colorfastness, composition (cotton/polyester), weave</li>
+                <!-- <li class="description">Use: Garments, home textiles</li> -->
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item d-flex position-relative h-100" style="background-color: rgba(0, 0, 0, 0.1);">
+              <!-- <i class="bi bi-card-checklist icon flex-shrink-0"></i> -->
+              <div>
+                <h4 class="title">Garments</h4>
+                <li class="description">Sizes, stitching style, fabric type</li>
+                <!-- <li class="description">Use: Upholstery, bags, uniforms</li> -->
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item d-flex position-relative h-100" style="background-color: rgba(0, 0, 0, 0.1);">
+              <!-- <i class="bi bi-bar-chart icon flex-shrink-0"></i> -->
+              <div>
+                <h4 class="title">Areca Plates</a></h4>
+                <li class="description">Diameter, shape (round/rectangle), compostable</li>
+                <!-- <li class="description">Use: Fashionwear, scarves, ethnic wear</li> -->
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item d-flex position-relative h-100" style="background-color: rgba(0, 0, 0, 0.1);">
+              <!-- <i class="bi bi-bar-chart icon flex-shrink-0"></i> -->
+              <div>
+                <h4 class="title">Neem Powder</a></h4>
+                <li class="description">Mesh size, moisture %, active ingredient</li>
+                <!-- <li class="description">Use: Jeans, jackets, workwear</li> -->
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item d-flex position-relative h-100" style="background-color: rgba(0, 0, 0, 0.1);">
+              <!-- <i class="bi bi-binoculars icon flex-shrink-0"></i> -->
+              <div>
+                <h4 class="title">Activated Carbon</h4>
+                <li class="description">Iodine value, surface area, mesh size</li>
+                <!-- <li class="description">Use: Industrial, medical, geo textiles</li> -->
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item d-flex position-relative h-100" style="background-color: rgba(0, 0, 0, 0.1);">
+              <!-- <i class="bi bi-binoculars icon flex-shrink-0"></i> -->
+              <div>
+                <h4 class="title">Phenolic Resin</h4>
+                <li class="description">Viscosity, melting point, cure time</li>
+                <!-- <li class="description">Use: Industrial, medical, geo textiles</li> -->
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+        </div>
+
+      </div>
+      
+    </section><!-- /Services Section -->
+
+
+    <!-- Services Section -->
+    <section id="services" class="services-pg section pb-5">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Product Types / Varieties</h2>
+        <!-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> -->
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-3">
+
+          <div class="col-md-12" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item d-flex position-relative" style="background-color: rgba(0, 0, 0, 0.022);">
+              <!-- <i class="bi bi-briefcase icon flex-shrink-0"></i> -->
+              <div>
+                <h4 class="title">Fabrics:- Knitted, woven, printed, dyed</h4>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-md-12" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item d-flex position-relative" style="background-color: rgba(0, 0, 0, 0.022);">
+              <!-- <i class="bi bi-card-checklist icon flex-shrink-0"></i> -->
+              <div>
+                <h4 class="title">Garments:- Casual wear, uniforms, workwear</h4>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-md-12" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item d-flex position-relative" style="background-color: rgba(0, 0, 0, 0.022);">
+              <!-- <i class="bi bi-bar-chart icon flex-shrink-0"></i> -->
+              <div>
+                <h4 class="title">Towels:- Terry towels, hotel towels, printed bath towels</a></h4>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-md-12" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item d-flex position-relative" style="background-color: rgba(0, 0, 0, 0.022);">
+              <!-- <i class="bi bi-bar-chart icon flex-shrink-0"></i> -->
+              <div>
+                <h4 class="title">Eco Items:- Round/partition areca plates, jute shopping bags</a></h4>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-md-12" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item d-flex position-relative" style="background-color: rgba(0, 0, 0, 0.022);">
+              <!-- <i class="bi bi-binoculars icon flex-shrink-0"></i> -->
+              <div>
+                <h4 class="title">Herb:- Powder, capsules, private-label wellness kits</h4>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-md-12" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item d-flex position-relative" style="background-color: rgba(0, 0, 0, 0.022);">
+              <!-- <i class="bi bi-binoculars icon flex-shrink-0"></i> -->
+              <div>
+                <h4 class="title">Chemicals:- Industrial, cosmetic, pharma grade</h4>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+        </div>
+
+      </div>
+      
+    </section><!-- /Services Section -->
+
+    <section id="faq" class="faq section pb-4">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Who Uses This?</h2>
+        <!-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> -->
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row justify-content-center">
+
+          <div class="col-lg-10" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="faq-container">
+
+              <div class="faq-item">
+                <h3>Buyer Industry</h3>
+                <div class="faq-content">
+                  <p> •	Fashion retailers, textile wholesalers
+                        <br>
+                      •	Hotels, resorts, hospitals
+                      <br>
+                      •	Eco retail stores, packaging companies
+                      <br>
+                      •	Interior designers, gift stores
+                      <br>
+                      •	Industrial manufacturers (adhesives, pharma)
+                      <br>
+                      •	Ayurvedic brands, online wellness stores
+                  </p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+            </div>
+
+          </div><!-- End Faq Column-->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Faq Section -->
+
+
+    <!-- Services Section -->
+    <section id="services" class="services section section-bg dark-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Target Export Countries</h2>
+        <!-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> -->
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item h-100">
+              <!-- <i class="bi bi-briefcase icon flex-shrink-0"></i> -->
+              <div>
+                <h4 class="title"><a class="stretched-link" style="color: #e03a3c;">Africa</a></h4>
+                <li class="description">Kenya</li>
+                <li class="description">Nigeria</li>
+                <li class="description">South Africa</li>
+                <li class="description">Egypt</li>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item h-100">
+              <!-- <i class="bi bi-briefcase icon flex-shrink-0"></i> -->
+              <div>
+                <h4 class="title"><a class="stretched-link" style="color: #e03a3c;">SE Asia</a></h4>
+                <li class="description">Vietnam</li>
+                <li class="description">Philippines</li>
+                <li class="description">Indonesia</li>
+                <li class="description">Malaysia</li>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item h-100">
+              <!-- <i class="bi bi-briefcase icon flex-shrink-0"></i> -->
+              <div>
+                <h4 class="title"><a class="stretched-link" style="color: #e03a3c;">Middle East</a></h4>
+                <li class="description">UAE</li>
+                <li class="description">Saudi Arabia</li>
+                <li class="description">Oman</li>
+                <li class="description">Qatar</li>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item h-100">
+              <!-- <i class="bi bi-briefcase icon flex-shrink-0"></i> -->
+              <div>
+                <h4 class="title"><a class="stretched-link" style="color: #e03a3c;">Other Markets</a></h4>
+                <li class="description">USA</li>
+                <li class="description">UK</li>
+                <li class="description">Germany</li>
+                <li class="description">Australia</li>
+                <li class="description">Canada</li>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+          
+        </div>
+
+      </div>
+      
+    </section><!-- /Services Section -->
+
+    <section id="faq" class="faq section pb-4">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Most Common Buyer Questions (FAQs)?</h2>
+        <!-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> -->
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row justify-content-center">
+
+          <div class="col-lg-10" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="faq-container">
+
+              <div class="faq-item">
+                <h3>Q: Can you offer private labeling?</h3>
+                <div class="faq-content">
+                  <p>A: Yes, we support OEM/ODM with MOQ.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+              
+              <div class="faq-item">
+                <h3>Q: What’s the minimum order quantity?</h3>
+                <div class="faq-content">
+                  <p>A: 100–500 pcs per item depending on category.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>Q: Do you provide samples?</h3>
+                <div class="faq-content">
+                  <p>A: Yes, free or paid samples based on product.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>Q: What certifications do you hold?</h3>
+                <div class="faq-content">
+                  <p>A: Certifications vary per product; we provide MSDS, FSSAI, GMP, etc.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>Q: Delivery time?</h3>
+                <div class="faq-content">
+                  <p>A: 15–30 days depending on item and quantity.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+            </div>
+
+          </div><!-- End Faq Column-->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Faq Section -->
+
+
+    <!-- Services Section -->
+    <section id="services" class="services section section-bg dark-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Where to Source in India</h2>
+        <!-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> -->
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item h-100">
+              <!-- <i class="bi bi-briefcase icon flex-shrink-0"></i> -->
+              <div>
+                <h4 class="title"><a class="stretched-link" style="color: #e03a3c;">Textiles/Apparel</a></h4>
+                <li class="description">Tirupur</li>
+                <li class="description">Ludhiana</li>
+                <li class="description">Surat</li>
+                <li class="description">Erode</li>
+                <li class="description">Panipat</li>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item h-100">
+              <!-- <i class="bi bi-briefcase icon flex-shrink-0"></i> -->
+              <div>
+                <h4 class="title"><a class="stretched-link" style="color: #e03a3c;">Eco-Friendly Products</a></h4>
+                <li class="description">Kerala</li>
+                <li class="description">Tamil Nadu</li>
+                <li class="description">West Bengal</li>
+                <!-- <li class="description">Malaysia</li> -->
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item h-100">
+              <!-- <i class="bi bi-briefcase icon flex-shrink-0"></i> -->
+              <div>
+                <h4 class="title"><a class="stretched-link" style="color: #e03a3c;">Handicrafts</a></h4>
+                <li class="description">Jaipur</li>
+                <li class="description">Moradabad</li>
+                <li class="description">Saharanpur</li>
+                <li class="description">Jodhpur</li>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item h-100">
+              <!-- <i class="bi bi-briefcase icon flex-shrink-0"></i> -->
+              <div>
+                <h4 class="title"><a class="stretched-link" style="color: #e03a3c;">Hotel Supplies</a></h4>
+                <li class="description">Ahmedabad</li>
+                <li class="description">Karur</li>
+                <li class="description">Coimbatore</li>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item h-100">
+              <!-- <i class="bi bi-briefcase icon flex-shrink-0"></i> -->
+              <div>
+                <h4 class="title"><a class="stretched-link" style="color: #e03a3c;">Herbal/Ayurvedic</a></h4>
+                <li class="description">Rajasthan</li>
+                <li class="description">Gujarat</li>
+                <li class="description">Madhya Pradesh</li>
+                <li class="description">Kerala</li>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item h-100">
+              <!-- <i class="bi bi-briefcase icon flex-shrink-0"></i> -->
+              <div>
+                <h4 class="title"><a class="stretched-link" style="color: #e03a3c;">Chemicals</a></h4>
+                <li class="description">Gujarat (Ankleshwar, Vapi)</li>
+                <li class="description">Maharashtra</li>
+                <!-- <li class="description">Coimbatore</li> -->
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+          
+        </div>
+
+      </div>
+      
+    </section><!-- /Services Section -->
+
+    
+
+    <!-- Portfolio Section -->
+    <!-- /Portfolio Section -->
+
+    <!-- Testimonials Section -->
+    <!-- <section id="testimonials" class="testimonials section">
+
+      
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Testimonials</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 1,
+                  "spaceBetween": 40
+                },
+                "1200": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 10
+                }
+              }
+            }
+          </script>
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                <h3>Saul Goodman</h3>
+                <h4>Ceo &amp; Founder</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                <h3>Sara Wilsson</h3>
+                <h4>Designer</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                <h3>Jena Karlis</h3>
+                <h4>Store Owner</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                <h3>Matt Brandon</h3>
+                <h4>Freelancer</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                <h3>John Larson</h3>
+                <h4>Entrepreneur</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section> -->
+    <!-- /Testimonials Section -->
+
+    <!-- Pricing Section -->
+    <!-- <section id="pricing" class="pricing section section-bg dark-background">
+
+      
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Pricing</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      </div>
+
+      <div class="container">
+
+        <div class="row g-4 g-lg-0">
+
+          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="pricing-item">
+              <h3>Free Plan</h3>
+              <h4><sup>$</sup>0<span> / month</span></h4>
+              <ul>
+                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
+                <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
+                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
+                <li class="na"><i class="bi bi-x"></i> <span>Pharetra massa massa ultricies</span></li>
+                <li class="na"><i class="bi bi-x"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+              </ul>
+              <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 featured" data-aos="zoom-in" data-aos-delay="200">
+            <div class="pricing-item">
+              <h3>Business Plan</h3>
+              <h4><sup>$</sup>29<span> / month</span></h4>
+              <ul>
+                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
+                <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
+                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
+                <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
+                <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+              </ul>
+              <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+            </div>
+          </div>
+
+          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="pricing-item">
+              <h3>Developer Plan</h3>
+              <h4><sup>$</sup>49<span> / month</span></h4>
+              <ul>
+                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
+                <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
+                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
+                <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
+                <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+              </ul>
+              <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section> -->
+    <!-- /Pricing Section -->
+
+  
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section mt-4 pb-5">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <!-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> -->
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+          <div class="col-lg-6 ">
+            <div class="row gy-4">
+
+              <div class="col-lg-12">
+                <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="200">
+                  <i class="bi bi-geo-alt"></i>
+                  <h3>Address</h3>
+                  <p>[Your Address / City]</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="col-md-6">
+                <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="300">
+                  <i class="bi bi-telephone"></i>
+                  <h3>Call Us</h3>
+                  <p>[Your Phone Number]</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="col-md-6">
+                <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="400">
+                  <i class="bi bi-envelope"></i>
+                  <h3>Email Us</h3>
+                  <p>info@merconexport.com</p>
+                </div>
+              </div><!-- End Info Item -->
+
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <form method="POST" data-aos="fade-up" data-aos-delay="500">
+            {% csrf_token %}
+
+            <div class="row gy-4">
+
+              <div class="col-md-6">
+                <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" required>
+              </div>
+
+              <div class="col-md-6">
+                <input type="email" name="email" id="email" class="form-control" placeholder="Your Email" required>
+              </div>
+
+              
+              <div class="col-md-12">
+                <input type="tel" name="phone" id="phone" class="form-control" placeholder="Phone" required>
+              </div>
+
+              <div class="col-md-12">
+                <input type="text" name="subject" id="subject" class="form-control" placeholder="Subject" required>
+              </div>
+
+              <div class="col-md-12">
+                <textarea name="message" id="message" class="form-control" rows="4" placeholder="Message" required></textarea>
+              </div>
+
+              <div class="col-md-12 text-center">
+                <button type="submit">Send Message</button>
+              </div>
+
+            </div>
+          </form>
+
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-6 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">MerconExport</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>[Your Address / City]</p>
+            <p>[Your Address / City]</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>Phone/WhatsApp: +91-XXXXXXXXXX</span></p>
+            <p><strong>Email:</strong> <span>info@merconexport.com</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <!-- <li><a href="#">Services</a></li> -->
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-3 footer-links">
+          <h4>Our Products</h4>
+          <ul>
+            <li><a href="{% url 'carpet_pg' %}">Carpet Collection</a></li>
+            <li><a href="{% url 'furniture_pg' %}">Furniture Collection</a></li>
+            <li><a href="{% url 'textile_pg' %}">Textile Collection</a></li>
+            <li><a href="{% url 'jute_pg' %}">Jute Collection</a></li>
+            <li><a href="{% url 'leather_pg' %}">Leather and Tomato Collection</a></li>
+            <li><a href="{% url 'marble_pg' %}">Marble Collection</a></li>
+          </ul>
+        </div>
+
+        <!-- <div class="col-lg-4 col-md-12 footer-newsletter">
+          <h4>Our Newsletter</h4>
+          <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+          <form action="forms/newsletter.php" method="post" class="php-email-form">
+            <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Your subscription request has been sent. Thank you!</div>
+          </form>
+        </div> -->
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>2025 © <span>Copyright</span> <strong class=" sitename">MerconExport</strong> <span>All Rights Reserved</span></p>
+      
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <!-- <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script> -->
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src ="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'assets/vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+
+  <!-- Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+  <script>
+  {% if messages %}
+    {% for message in messages %}
+      swal({
+        title: "Thank You!",
+        text: "{{ message|escapejs }}",
+        icon: "success",
+        button: "OK",
+      });
+    {% endfor %}
+  {% endif %}
+</script>
+
+</body>
+
+</html>
